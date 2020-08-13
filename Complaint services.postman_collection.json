@@ -1,0 +1,460 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Complaint services",
+		"_postman_id": "449692f2-4f16-c22d-40f8-6b8f3da36f85",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/category/addcategory",
+			"request": {
+				"url": "http://localhost:3000/category/addcategory",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"categoryname\":\"YYY\"\n}"
+				},
+				"description": "adding new category"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/category/list/102",
+			"request": {
+				"url": "http://localhost:3000/training/listAll",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"groupid\" : \"203\",\n\t\"groupname\" : \"Lavender\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/subcategory/addsubcategory/104",
+			"request": {
+				"url": "http://localhost:3000/subcategory/addsubcategory/106",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"subcategoryname\":\"Hotstar\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/subcategory/list",
+			"request": {
+				"url": "http://localhost:3000/subcategory/list/101",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/employee/getEmployee/233434",
+			"request": {
+				"url": "http://localhost:3000/employee/getEmployee",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/complaint/submit",
+			"request": {
+				"url": "http://localhost:3000/complaint/submit",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"EmpId\":34454,\n\t\"CategoryName\":\"CategoryName\",\n\t\"SubCategoryName\":\"SubCategoryName\",\n\t\"ReceipientEmpId\":20094,\n\t\"Severity\":\"High\",\n\t\"Description\":\"Fan is not working \"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/complaint/list/20094",
+			"request": {
+				"url": "http://localhost:3000/complaint/list/370490",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/refer/submit",
+			"request": {
+				"url": "http://localhost:3000/refer/submit",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"ApplicationNumber\":2072,\r\n\t\"ApplicationStatus\":\"CREATED\",\r\n\t\"ApplicationDetails\":{\r\n\t\t\"Name\":\"Adharaparpu Haritha\",\r\n\t\t\"Email\":\"dummyemail@dummy.com\",\r\n\t\t\"ContactNumber\":9002344683,\r\n\t\t\"Dob\":\"12-23-2020\",\r\n\t\t\"Gender\":\"Female\",\r\n\t\t\"CurrentOrg\":\"Wipro Technologies\",\r\n\t\t\"CurrentLoc\":\"Hyderabad\",\r\n\t\t\"TypeOfEmployment\":\"Permanent\",\r\n\t\t\"NoticePeriod\":\"60 days\",\r\n\t\t\"Resume\":\"UPLOADED\"\r\n\t\t\r\n\t}\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/refer/getrequestnumber",
+			"request": {
+				"url": "http://localhost:3000/refer/getrequestnumber",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/refer/upload_resume",
+			"request": {
+				"url": "http://localhost:3000/refer/submit",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "applicantResume",
+							"description": "",
+							"type": "file",
+							"src": "ShuvoSample4.jpg"
+						},
+						{
+							"key": "ApplicationNumber",
+							"value": "2072",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ApplicantEmailId",
+							"value": "shuvojyotiprl@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Name",
+							"value": "Soumya Kanti Banerjee",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "assfak676@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ContactNumber",
+							"value": "908279978",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Dob",
+							"value": "12-23-2020",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Gender",
+							"value": "Male",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "CurrentOrg",
+							"value": "EPAM",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "CurrentLoc",
+							"value": "Noida",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "TypeOfEmployment",
+							"value": "Contract",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "NoticePeriod",
+							"value": "15 Days",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Resume",
+							"value": "NameOfResume-EmailId",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/refer/submit",
+			"request": {
+				"url": "http://localhost:3000/refer/submit",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "applicantResume",
+							"description": "",
+							"type": "file",
+							"src": "ShuvoSample3.pdf"
+						},
+						{
+							"key": "Name",
+							"value": "Soumya Kanti Banerjee",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "assfak676999@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ContactNumber",
+							"value": "908279978",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Dob",
+							"value": "12-23-2020",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Gender",
+							"value": "Male",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "CurrentOrg",
+							"value": "EPAM",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "CurrentLoc",
+							"value": "Noida",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "TypeOfEmployment",
+							"value": "Contract",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "NoticePeriod",
+							"value": "15 Days",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Resume",
+							"value": "NameOfResume-EmailId",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/refer/submit",
+			"request": {
+				"url": "http://localhost:3000/refer/submit",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "applicantResume",
+							"value": "",
+							"description": "",
+							"type": "file"
+						},
+						{
+							"key": "Name",
+							"value": "Soumya Kanti Banerjee",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "assfak676999@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ContactNumber",
+							"value": "908279978",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Dob",
+							"value": "12-23-2020",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Gender",
+							"value": "Male",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "CurrentOrg",
+							"value": "EPAM",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "CurrentLoc",
+							"value": "Noida",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "TypeOfEmployment",
+							"value": "Contract",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "NoticePeriod",
+							"value": "15 Days",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Resume",
+							"value": "NameOfResume-EmailId",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/user/login",
+			"request": {
+				"url": "http://localhost:3000/user/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"assfa324@ymail.com\",\n\t\"password\":\"2072@totO1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/nomination/nominate",
+			"request": {
+				"url": "http://localhost:3000/nomination/nominate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"EmpId\":\"233434\",\n\t\"TrainingId\":\"5f0d4253e5876213ace8efb0\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/nomination/getNominationDetails/233434/In_Progress",
+			"request": {
+				"url": "http://localhost:3000/nomination/getNominationDetails/233434/In_Progress",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
